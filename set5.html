@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="questionStyles.css">
+    <link rel="shortcut icon" href="./ressources/scrum.png" type="image/x-icon" />  
+    <title>Quiz APP</title>
+</head>
+<body>
+    <div class="app">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+    <h2 id="quiz-title" style="margin: 0;">Scrum Framework Basics</h2>
+    <div id="circle-timer-container" style="position: relative; width: 60px; height: 60px;">
+        <svg id="circle-timer" width="60" height="60">
+            <circle
+                cx="30"
+                cy="30"
+                r="26"
+                stroke="#00c853"
+                stroke-width="6"
+                fill="none"
+                stroke-linecap="round"
+            />
+        </svg>
+        <div id="circle-timer-text"
+             style="
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 60px;
+                text-align: center;
+                font-weight: bold;
+                font-size: 18px;
+             ">
+            50
+        </div>
+    </div>
+</div>
+        <div class="quiz">
+            <div id="progress-container" style="margin-bottom: 16px;">
+    <div id="progress-text" style="margin-bottom: 4px;">Frage 1 von X</div>
+    <div style="background: #eee; border-radius: 8px; height: 12px;">
+        <div id="progress-bar" style="background: #007bff; height: 12px; width: 0%; border-radius: 8px;"></div>
+    </div>
+</div>
+            <h2 id="question">Question qoes here</h2>
+            <div id="answer-buttons">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+            <button id="next-btn">Next</button>
+        </div>
+    </div>
+    <script src="set5.js"></script>
+</body>
+</html>
