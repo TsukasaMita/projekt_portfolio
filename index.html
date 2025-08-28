@@ -37,5 +37,30 @@
         <p>&copy; 2025 Scrum-Quiz.</p>
         <p>created by Björn Riemer, Tsukasa Mita and Justin Horn</p>
     </footer>
+    <script>
+document.querySelectorAll(".back-button").forEach(btn => {
+    btn.addEventListener("mousemove", function(e) {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        btn.style.background = `radial-gradient(circle at ${x}px ${y}px, #4f8cff 0%, #fff 80%)`;
+    });
+    btn.addEventListener("mouseleave", function() {
+        btn.style.background = "#fff";
+    });
+    // Optional: sanftes "Wackeln" beim Klicken
+    btn.addEventListener("click", function() {
+        btn.animate([
+            { transform: 'scale(1.05) rotate(-2deg)' },
+            { transform: 'scale(0.95) rotate(2deg)' },
+            { transform: 'scale(1.02) rotate(-1deg)' },
+            { transform: 'scale(1) rotate(0deg)' }
+        ], {
+            duration: 350,
+            easing: 'ease'
+        });
+    });
+});
+</script>
 </body>
 </html>
